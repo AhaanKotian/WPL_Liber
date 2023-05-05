@@ -1,0 +1,131 @@
+<!--If having trouble with styling due to improper tags or something like that, lmk-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Map</title>
+    <link rel="stylesheet" type="text/css" href="../css/drivenow.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">Libér</div>
+      <nav>
+                <ul class="navlinks">
+                    <li><a href="driverui.php">Home</a></li>
+                    <li><a href="#">Our Policy</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+       </nav>
+    </header>
+
+    <div class="container">
+      <div class = sections>
+        <div class="leftsec">
+           <form class="address-form">
+             <a class="title">Find a Ride!</a>
+             
+             <input class="input" id="pu-text" placeholder="Current Location"><br><br>
+              <button class="submit-btn" id="submit-btn" type="submit">Search
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path>
+                    <path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path>
+                  </svg>
+                </div>
+              </button>
+             
+             
+          </form>
+        </div>
+
+
+        <dialog class="modal" id="loadermodal">
+          <div class="loader">
+           <div class="loader1">
+            <p>loading</p>
+            <div class="words">
+                <span class="word">pickup location</span>
+                <span class="word">pickup location</span>
+                <span class="word">estimate fare</span>
+                <span class="word">drop location</span>
+                <span class="word">passenger details</span>
+                
+            </div>
+           </div>
+            <div class="loader2">
+              <div class="wrapper">
+                <div class="circle"></div>
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+                <div class="line-4"></div>
+              </div>
+            </div>
+          </div>
+        </dialog>
+
+        <!-- <dialog class="modal" id="riderdetails">
+          <div class="deetscontainer">
+            <div class="deetsheading">Available Rides</div>
+            <div class="rides">
+
+             <ul class = "riderlist">
+              <div class="ride1">
+              <div class="trip-card">
+                <div class="row1">
+                  <img src="https://via.placeholder.com/80" alt="Rider Profile Picture" class="rider-avatar">
+                  <div class="trip-details">
+                    <h3>Name: <span id="rider-name"></span></h3>
+                     <p>Phone: <span id="rider-phone">1234567890</span></p> 
+                    <p>Pickup Location: <span id="pickup-location"></span></p>
+                    <p>Drop Location: <span id="drop-location"></span></p>                    
+                    <p class="trip-time">April 25, 2023 at 2:30 PM</p>
+                    <p class="trip-amount">Rs 450.50</p>
+                  </div>
+                </div>
+               
+                <button class="request" type="button">
+                        Accept Request
+                    </button>
+              </div> 
+            </ul>
+            </div>
+              <div class="ride2">
+              <div class="trip-card">
+                <div class="row1">
+                  <img src="https://via.placeholder.com/80" alt="Rider Profile Picture" class="rider-avatar">
+                  <div class="trip-details">
+                    <h3 class="rider-name">Devansh Khandor</h3>
+                    <p class="pickup-location">Pickup: 123 Main St, City, State ZIP</p>
+                    <p class="car-details">+91 1234567890</p>
+                    <p class="trip-time">April 5, 2023 at 9:30 PM</p>
+                    <p class="trip-amount">Rs 250</p>
+                  </div>
+                </div>
+               
+                <button class="request" type="button">
+                        Accept Request
+                    </button>
+            
+              </div>
+             </div>
+             
+            </div>
+          </div>
+        </dialog> -->
+        
+       
+
+          
+        <div class="rightsec">
+           <div class="map"> </div>
+           <div class="dispResult"></div> <!-- displays distance and time of trip. -->
+        </div>
+           <script src="../js/drivenow.js"></script>
+           <!-- Google maps and marker -->
+           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOixmPLBhxBQt_X-ZvU2NIbYnNyBAcv4o&libraries=places&callback=initMap&solution_channel=GMP_QB_addressselection_v1_cAB" async defer></script>
+        
+
+      </div>
+    
+  </body>
+</html>
